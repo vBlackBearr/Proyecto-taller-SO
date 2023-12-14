@@ -1,7 +1,7 @@
 <?php
 // Función para obtener la información de los puertos desde firewalld
 function obtenerInformacionPuertos() {
-    $comando = "firewall-cmd --zone=public --list-ports";
+    $comando = "firewall-cmd --list-ports";
     $informacionPuertos = shell_exec($comando);
 
     return $informacionPuertos;
