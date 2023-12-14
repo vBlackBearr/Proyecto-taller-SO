@@ -1,10 +1,6 @@
 <?php
 // Función para obtener la información de los puertos desde firewalld
 
-$comando2 = "sudo /usr/bin/firewall-cmd --list-ports";
-$informacionwhoami= shell_exec($comando2);
-echo $informacionwhoami;
-
 function obtenerInformacionPuertos() {
     $comando = "sudo /usr/bin/firewall-cmd --list-ports";
     $informacionPuertos = shell_exec($comando);
@@ -20,11 +16,11 @@ function procesarAccion() {
         // Validar y sanitizar la entrada del usuario
 
         // Ejecutar comandos de firewalld
-        $comando = "firewall-cmd --$accion-port=$puerto";
+        $comando = "sudo /usr/bin/firewall-cmd --$accion-port=$puerto";
         $resultado = shell_exec($comando);
 
         // Recargar firewalld para aplicar los cambios
-        $comando_recarga = "firewall-cmd --reload";
+        $comando_recarga = "sudo /usr/bin/firewall-cmd --reload";
         shell_exec($comando_recarga);
 
         $mensaje = "Comando ejecutado: $comando";
