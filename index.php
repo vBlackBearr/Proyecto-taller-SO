@@ -76,7 +76,7 @@ procesarAccion();
     </style>
 </head>
 <body>
-    <h1>Control de Puertos</h1>
+    <h1>Control de Puertos 2</h1>
     
     <h2>Estado Actual de los Puertos</h2>
     <table>
