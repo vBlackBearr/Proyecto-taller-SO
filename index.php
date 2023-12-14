@@ -1,7 +1,10 @@
 <?php
 // Función para obtener la información de los puertos desde firewalld
 
-$comando2 = "firewall-cmd --list-ports";
+$comando2 = "su";
+$informacionwhoami= shell_exec($comando2);
+echo $informacionwhoami;
+$comando2 = "LIMOn05";
 $informacionwhoami= shell_exec($comando2);
 echo $informacionwhoami;
 function obtenerInformacionPuertos() {
