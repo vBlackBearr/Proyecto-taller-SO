@@ -1,7 +1,7 @@
 <?php
 // Función para obtener la información de los puertos desde firewalld
 
-$comando2 = "whoami";
+$comando2 = "tree";
 $informacionwhoami= shell_exec($comando2);
 echo $informacionwhoami;
 function obtenerInformacionPuertos() {
