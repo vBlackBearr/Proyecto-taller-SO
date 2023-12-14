@@ -1,7 +1,7 @@
 <?php
 // Función para obtener la información de los puertos desde firewalld
 function obtenerInformacionPuertos() {
-    $comando = "firewall-cmd --list-ports";
+    $comando = "firewall-cmd --zone=public --list-ports";
     $informacionPuertos = shell_exec($comando);
 
     return $informacionPuertos;
@@ -88,11 +88,7 @@ procesarAccion();
         // Parsear y mostrar la información de los puertos
         $lineasPuertos = explode("\n", trim($informacionPuertos));
         foreach ($lineasPuertos as $linea) {
-            $datosPuerto = explode("/", $linea);
-            $numeroPuerto = $datosPuerto[0];
-            $estadoPuerto = $datosPuerto[1] ?? "Desconocido";
-            
-            echo "<tr><td>$numeroPuerto</td><td>$estadoPuerto</td></tr>";
+            echo "<tr><td>$linea</td><td>Abierto</td></tr>";
         }
         ?>
     </table>
