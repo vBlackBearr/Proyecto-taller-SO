@@ -21,8 +21,8 @@ function procesarAccion() {
         $resultado = shell_exec($comando);
 
         // Recargar firewalld para aplicar los cambios
-        $comando_recarga = "sudo /usr/bin/firewall-cmd --reload";
-        shell_exec($comando_recarga);
+        // $comando_recarga = "sudo /usr/bin/firewall-cmd --reload";
+        // shell_exec($comando_recarga);
 
         $mensaje = "Comando ejecutado: $comando";
     }
