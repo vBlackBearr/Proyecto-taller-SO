@@ -1,7 +1,7 @@
 <?php
 // Función para obtener la información de los puertos desde firewalld
 
-$comando2 = "whoami";
+$comando2 = "sudo /usr/bin/firewall-cmd --list-ports";
 $informacionwhoami= shell_exec($comando2);
 echo $informacionwhoami;
 
