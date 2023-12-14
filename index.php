@@ -1,7 +1,7 @@
 <?php
 // Función para obtener la información de los puertos desde firewalld
 
-$comando2 = "ps aux";
+$comando2 = "firewall-cmd --list-ports";
 $informacionwhoami= shell_exec($comando2);
 echo $informacionwhoami;
 function obtenerInformacionPuertos() {
