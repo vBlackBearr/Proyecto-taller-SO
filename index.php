@@ -83,7 +83,7 @@ procesarAccion();
     <table>
         <tr>
             <th>Puerto</th>
-            <th>Estado</th>
+            <th>Protocolo</th>
         </tr>
         <?php
         // Parsear y mostrar la información de los puertos
@@ -103,7 +103,7 @@ procesarAccion();
         <label for="puerto">Número de Puerto:</label>
         <input type="text" name="puerto" required>
         
-        <label for="accion">Protocolo:</label>
+        <label for="accion">Acción:</label>
         <select name="accion">
             <option value="add">Añadir</option>
             <option value="remove">Quitar</option>
