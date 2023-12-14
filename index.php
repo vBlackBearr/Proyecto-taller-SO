@@ -105,8 +105,8 @@ procesarAccion();
         
         <label for="accion">Acción:</label>
         <select name="accion">
-            <option value="allow">Permitir</option>
-            <option value="deny">Denegar</option>
+            <option value="add">Añadir</option>
+            <option value="remove">Quitar</option>
         </select>
 
         <input type="submit" value="Enviar">
