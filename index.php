@@ -79,7 +79,7 @@ procesarAccion();
 <body>
     <h1>Control de Puertos</h1>
     
-    <h2>Estado Actual de los Puertos</h2>
+    <h2>Puertos Abiertos:</h2>
     <table>
         <tr>
             <th>Puerto</th>
