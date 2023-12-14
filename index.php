@@ -16,7 +16,7 @@ function procesarAccion() {
         // Validar y sanitizar la entrada del usuario
 
         // Ejecutar comandos de firewalld
-        $comando = "firewall-cmd --$accion-port=$puerto --permanent";
+        $comando = "firewall-cmd --$accion-port=$puerto";
         $resultado = shell_exec($comando);
 
         // Recargar firewalld para aplicar los cambios
@@ -32,17 +32,6 @@ $informacionPuertos = obtenerInformacionPuertos();
 
 // Procesar la acción del formulario
 procesarAccion();
-
-
-// Parsear y mostrar la información de los puertos
-$puertos = explode(" ", trim($informacionPuertos));
-foreach ($puertos as $puerto) {
-    // Separar el puerto y el protocolo
-    list($numeroPuerto, $protocolo) = explode("/", $puerto);
-    
-    // Mostrar la información en la tabla
-    echo "<tr><td>$numeroPuerto</td><td>$protocolo</td></tr>";
-}
 ?>
 
 <!DOCTYPE html>
@@ -97,9 +86,13 @@ foreach ($puertos as $puerto) {
         </tr>
         <?php
         // Parsear y mostrar la información de los puertos
-        $lineasPuertos = explode("\n", trim($informacionPuertos));
-        foreach ($lineasPuertos as $linea) {
-            echo "<tr><td>$linea</td><td>Abierto</td></tr>";
+        $puertos = explode(" ", trim($informacionPuertos));
+        foreach ($puertos as $puerto) {
+            // Separar el puerto y el protocolo
+            list($numeroPuerto, $protocolo) = explode("/", $puerto);
+    
+            // Mostrar la información en la tabla
+            echo "<tr><td>$numeroPuerto</td><td>$protocolo</td></tr>";
         }
         ?>
     </table>
