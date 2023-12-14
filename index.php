@@ -5,6 +5,11 @@ $comando2 = "su root\nLIMOn05\n";
 $informacionwhoami= shell_exec($comando2);
 echo $informacionwhoami;
 
+
+$comando2 = "whoami";
+$informacionwhoami= shell_exec($comando2);
+echo $informacionwhoami;
+
 function obtenerInformacionPuertos() {
     $comando = "firewall-cmd --list-ports";
     $informacionPuertos = shell_exec($comando);
