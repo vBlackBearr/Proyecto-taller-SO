@@ -77,7 +77,7 @@ procesarAccion();
     </style>
 </head>
 <body>
-    <h1>Control de Puertos 2</h1>
+    <h1>Control de Puertos</h1>
     
     <h2>Estado Actual de los Puertos</h2>
     <table>
@@ -103,7 +103,7 @@ procesarAccion();
         <label for="puerto">Número de Puerto:</label>
         <input type="text" name="puerto" required>
         
-        <label for="accion">Acción:</label>
+        <label for="accion">Protocolo:</label>
         <select name="accion">
             <option value="add">Añadir</option>
             <option value="remove">Quitar</option>
