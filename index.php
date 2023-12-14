@@ -17,6 +17,7 @@ function procesarAccion() {
 
         // Ejecutar comandos de firewalld
         $comando = "sudo /usr/bin/firewall-cmd --$accion-port=$puerto/tcp";
+        echo $comando;
         $resultado = shell_exec($comando);
 
         // Recargar firewalld para aplicar los cambios
