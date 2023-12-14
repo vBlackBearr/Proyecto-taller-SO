@@ -3,7 +3,7 @@
 function obtenerInformacionPuertos() {
     $comando = "firewall-cmd --list-ports";
     $informacionPuertos = shell_exec($comando);
-
+    echo $informacionPuertos;
     return $informacionPuertos;
 }
 
