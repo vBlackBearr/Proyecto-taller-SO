@@ -32,6 +32,17 @@ $informacionPuertos = obtenerInformacionPuertos();
 
 // Procesar la acción del formulario
 procesarAccion();
+
+
+// Parsear y mostrar la información de los puertos
+$puertos = explode(" ", trim($informacionPuertos));
+foreach ($puertos as $puerto) {
+    // Separar el puerto y el protocolo
+    list($numeroPuerto, $protocolo) = explode("/", $puerto);
+    
+    // Mostrar la información en la tabla
+    echo "<tr><td>$numeroPuerto</td><td>$protocolo</td></tr>";
+}
 ?>
 
 <!DOCTYPE html>
